@@ -1,0 +1,24 @@
+create gym equipment store database
+
+create table gym(id INTEGER PRIMARY KEY,name TEXT, weight INTEGER, price INTEGER, amount INTEGER);
+insert into gym values(1, "Weight plate", 45, 60, 10);
+insert into gym values(2, "Weight plate", 35, 45, 8);
+insert into gym values(3, "Weight plate", 25, 35, 9);
+insert into gym values(4, "Weight plate", 10, 15, 4);
+insert into gym values(5, "Weight plate", 5, 10, 9);
+insert into gym values(6, "Weight plate", 2.5, 5, 5);
+insert into gym values(7, "Barbell", 55, 110, 3);
+insert into gym values(8, "Barbell", 45, 90, 6);
+insert into gym values(9, "Barbell", 30, 70, 8);
+insert into gym values(10,"Barbell", 15, 35, 5);
+insert into gym values(11, "Dumbells", 25, 30, 10);
+insert into gym values(12,"Dumbells", 30, 40, 7);
+insert into gym values(13,"Dumbells", 35, 45, 6);
+insert into gym values(14, "Dumbells", 40, 55, 8);
+insert into gym values( 15, "Dumbells", 45, 60, 9);
+- displayed database ordered by price
+SELECT * FROM gym ORDER by price DESC;
+How much total inventory is available
+SELECT SUM(amount)
+FROM gym;
+
