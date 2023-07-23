@@ -1,0 +1,44 @@
+/* Create table about the people and what they do here
+Table Created Movies stars and some personal info*/
+
+CREATE TABLE Movie_stars (id INTEGER PRIMARY KEY,
+Name TEXT,
+Oscar TEXT,
+Net_Worth INTEGER,
+Married TEXT);
+
+CREATE TABLE personal (id INTEGER PRIMARY KEY, 
+person_id INTEGER,
+Total_movies INTEGER,
+Salary REAL,
+Kids TEXT);
+
+INSERT INTO Movie_stars VALUES (1, "Tom Hanks","Yes", 4000000000,"Yes");
+INSERT INTO Movie_stars VALUES (2, "Samuel Jackson","No",250000000,"Yes");
+INSERT INTO Movie_stars VALUES (3, "Leonardo Dicaprio","Yes",300000000,"No");
+INSERT INTO Movie_stars VALUES(4, "Denzel Washington", "Yes",280000000,"Yes");
+
+SELECT * FROM Movie_stars;
+
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES
+(1, 100, 25000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES
+(2, 100,15000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) Values (3, 69,20000000, "No");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES
+(4, 48,20000000, "Yes");
+SELECT * FROM personal ;
+
+/*  WHich movie stars have  kids, used JOIN display to identify actors with kids*/
+SELECT Movie_stars.Name, personal.Kids FROM Movie_stars
+JOIN personal
+ON Movie_stars.id = personal.person_id;
+/*Identifying actors with Oscars and total movies done */
+SELECT Movie_stars.name, Movie_stars.Oscar, personal.Total_movies FROM Movie_stars
+OUTER LEFT JOIN personal 
+ON Movie_stars.id = personal.person_id;
+
+/* Actors Net worth and salries per movie*/
+SELECT Movie_stars.Name, Movie_stars.Net_worth, personal.salary FROM Movie_stars
+LEFT OUTER JOIN personal
+ON Movie_stars.id = personal.person_id;
