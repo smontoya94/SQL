@@ -13,20 +13,45 @@ Total_movies INTEGER,
 Salary REAL,
 Kids TEXT);
 
-INSERT INTO Movie_stars VALUES (1, "Tom Hanks","Yes", 4000000000,"Yes");
-INSERT INTO Movie_stars VALUES (2, "Samuel Jackson","No",250000000,"Yes");
-INSERT INTO Movie_stars VALUES (3, "Leonardo Dicaprio","Yes",300000000,"No");
-INSERT INTO Movie_stars VALUES(4, "Denzel Washington", "Yes",280000000,"Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES (1, "Tom Hanks","Yes", 4000000000,"Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES (2, "Samuel Jackson","No",250000000,"Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES (3, "Leonardo Dicaprio","Yes",300000000,"No");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(4, "Denzel Washington", "Yes",280000000,"Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES
+(5, "Adam Sandler", "No", 300000000, "Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(6, "Joe Rogan", "Definetly Not",120000000, "Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(7, "Will Smith", "No", 200000000, "No");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(8, "Brad Pitt", "Yes", 250000000, "No");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES
+(9, "Kevin Hart", "No", 350000000, "Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(10, "Tom Cruise", "Yes", 300000000, "Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(11, "Charlie Sheen","No", 2000000, "No");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(12, "The Rock", "No", 315000000, "Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(13, "Will Farrel","No", 225000000, "Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(14, "Cillian Murphy", "No", 40000000,"Yes");
+INSERT INTO Movie_stars(id, Name, Oscar, Net_Worth, Married) VALUES(15, "RDJ", "Yes", 300000000, "Yes");
 
 SELECT * FROM Movie_stars;
 
-INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES
-(1, 100, 25000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES (1, 100, 25000000, "Yes");
 INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES
 (2, 100,15000000, "Yes");
-INSERT INTO personal(person_id, Total_movies, Salary, Kids) Values (3, 69,20000000, "No");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES (3, 69,20000000, "No");
 INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES
 (4, 48,20000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES
+(5, 40, 25000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(6,10, 150000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(7, 35, 20000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(8,30, 30000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(9,20, 30000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(10,47, 20000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(11, 19, 0, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(12,20, 30000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(13, 35, 20000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(14, 15, 5000000, "Yes");
+INSERT INTO personal(person_id, Total_movies, Salary, Kids) VALUES(15,35,300000000, "Yes");
+
 SELECT * FROM personal ;
 
 /*  WHich movie stars have  kids, used JOIN display to identify actors with kids*/
