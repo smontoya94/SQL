@@ -1,0 +1,22 @@
+SELECT count(*) 
+FROM "netflix_titles_info"
+WHERE type = 'Movie';
+
+select max(date(date_added))
+FROM "netflix_titles_info";
+
+Select title 
+FROM "netflix_titles_info"
+Order by title asc;
+
+Select director
+FROM "netflix_titles_info" titles
+LEFT JOIN "netflix_people" people
+ON titles.show_id = people.show_id
+Where titles.title= 'The Starling';
+
+SELECT title, release_year
+FROM "netflix_titles_info"
+WHERE type= 'Movie'
+ORDER BY release_year asc
+LIMIT 1;
